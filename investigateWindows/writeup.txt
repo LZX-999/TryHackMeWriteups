@@ -1,0 +1,45 @@
+1.Whats the version and year of the windows machine?
+Right click start -> System -> Windows server 2016
+
+2. Which user logged in last
+Event viewer -> Filter by 4234 -> Administrator
+
+3. John last login
+net user john 
+
+4. What IP does the system connect to when it first starts?
+regedit -> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+
+5. Administrator
+net localgroup Administrators
+
+6.Scheduled task that is malicious
+Task Scheduler -> Task Scheduler Library -> Clean File system (It runs a malicious script)
+
+7. File the task is trying to run
+nc.ps1 (Its in the schedule)
+
+8 Port the file is listening to
+1348 (nc 1348)
+
+9. Jenny last logon
+Never (net user jenny)
+
+10. Compromise date
+Check the date of the nc.ps1 file
+
+11. First assign special priv
+Event viewer -> Windows log -> Security
+From here we create new view that filter out 0000 to 2359 on march 2 2019
+We then filter event id to 4737
+
+12. Tools used to get password
+Check content of mim-out in C:/TMP
+
+13. External control and command server
+Go to inetpub folder and cd into wwwpub the file extension there is the answer
+
+14. Last Port opened
+Go to firewall and inbound rule. Allows outside connection rule is suspicious
+
+ 

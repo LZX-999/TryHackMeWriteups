@@ -1,0 +1,6 @@
+1. run rustscan only port 22 and 21 is open which is ssh and ftp
+2. Login to ftp via anonymous we see its literally the entire os file is available, navigating to home/meliodas we get the user flag
+on first login we see a interesting folder called dontread, going inside we see its pgp file and a backup encrypted. Download the file
+Crack the private.asc using john run pgp2john private.asc > j.txt, john j.txt we get the password its xbox360. do pgp --import private.asc and key in the pw, then we do pgp --decrypt backup.pgp
+The file decrypted is the shadow file which contain hashed password of root, send it to hashcat by first saving the file with the root hash $6$07nYFaYf$F4VMaegmz7dKjsTukBLh6cP01iMmL7CiQDt1ycIm6a.bsOIBp0DwXVb9XI2EtULXJzBtaMZMNd2tV4uob5RVM0. Then we hashcat -m 1800 root_hash /usr/share/wordlists/rockyou.txt, we get the password hikari.
+SSH as root and get the root flag.
