@@ -6,7 +6,7 @@ Rustscan showed 2 ports open, port 80 and port 22 (ssh). Visiting the website, w
 
 ![screenshot](images/scan.png)
 
-When I entered the wrong credentials, it redirect us to a screen saying wrong username and password. When I tried admin:admin,
+When I entered the wrong credentials, it redirect us to a screen saying wrong username or password. When I tried admin:admin,
 I noticed that wrong username is not shown which means that if correct username was inputted but with wrong password, only wrong password will show up
 
 ![screenshot](images/userandpass.png)
