@@ -41,10 +41,12 @@ Running the exploit using metasploit gave me intial access but we are still unab
 
 ![screenshot](images/exploit.png)
 
-I ran linpeas on the system and linpeas flagged an unusual binary present called pwm. When I ran the binary, it execute id to get the user and then tries
-to print the password file present in the user if it is found. What can be done now is to fake the 'id' by creating our own version of id by doing
+I ran linpeas on the system and linpeas flagged an unusual binary present called pwm. 
 
 ![screenshot](images/pwm.png)
+
+When I ran the binary, it execute id to get the user and then tries
+to print the password file present in the user if it is found. What can be done now is to fake the 'id' by creating our own version of id by doing
 
 `echo '#!/bin/bash' > /tmp/id` create file starting with #!/bin/bash
 `echo 'echo "uid=33(think) gid=33(think) groups=(think)"' >> /tmp/id` append the format that id returns in the next line to spoof user
