@@ -6,7 +6,7 @@ Rustscan showed 2 ports open, port 80 and port 22 (ssh). Visiting the website, w
 
 ![screenshot](images/scan.png)
 
-When I entered the wrong credentials, it redirect us to screen saying wrong username and password. When I tried admin:admin,
+When I entered the wrong credentials, it redirect us to a screen saying wrong username and password. When I tried admin:admin,
 I noticed that wrong username is not shown which means that if correct username was inputted but with wrong password, only wrong password will show up
 
 ![screenshot](images/userandpass.png)
@@ -15,7 +15,7 @@ I noticed that wrong username is not shown which means that if correct username 
 
 
 Bruteforcing the admin password however did not yield any result so perhaps there may be another user that we can try.
-I wrote a simple python script that send a request to enumeration through the username (since we can just check if "Username" does not appear in 
+I wrote a simple python script that send a request to enumerate through common username (since we can just check if "Username" does not appear in 
 the response if so its a valid user) and found another user jose.
 
 ![screenshot](images/script.png)
