@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/43d06c9a-353e-41f8-aa98-33783026da5c)# Lookup
+# Lookup
 
 
 ## Enumeration
